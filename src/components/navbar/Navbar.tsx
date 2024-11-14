@@ -1,20 +1,13 @@
 'use client'
 
 import Link from 'next/link'
-import {useState} from 'react'
 import Dropdown from './Dropdown'
 import {dropdownData} from './navbarData'
 
 const NavBar = () => {
-  const [activeDropdown, setActiveDropdown] = useState<string>('')
-
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown((prev) => (prev === dropdown ? '' : dropdown))
-  }
-
   return (
     <nav>
-      <div>
+      <div className='relative'>
         <ul className='flex flex-col font-medium px-4 md:space-x-5 lg:space-x-5 rtl:space-x-reverse md:flex-row md:flex-wrap md:justify-center py-3'>
           <li>
             <Link
@@ -30,9 +23,6 @@ const NavBar = () => {
               key={index}
               label={dropdown.label}
               items={dropdown.items}
-              activeDropdown={activeDropdown}
-              toggleDropdown={toggleDropdown}
-              dropdownKey={dropdown.label.toLowerCase().replace(/\s+/g, '')}
             />
           ))}
 

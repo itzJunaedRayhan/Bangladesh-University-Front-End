@@ -1,39 +1,16 @@
-import Link from 'next/link'
-import React, {useState} from 'react'
+import React from 'react'
+import styles from './Dropdown.module.css'
 import {DropdownItem} from './dropdown.types'
 
 interface DropdownProps {
   label: string
   items: DropdownItem[]
-  activeDropdown: string
-  toggleDropdown: (dropdownKey: string) => void
-  dropdownKey: string
 }
 
-const Dropdown: React.FC<DropdownProps> = ({
-  label,
-  items,
-  activeDropdown,
-  toggleDropdown,
-  dropdownKey,
-}) => {
-  const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null)
-
-  const handleMouseEnter = (itemName: string) => {
-    setActiveSubMenu(itemName)
-  }
-
-  const handleMouseLeave = () => {
-    setActiveSubMenu(null)
-  }
-
+const Dropdown: React.FC<DropdownProps> = ({label, items}) => {
   return (
-    <li className='relative'>
-      <button
-        onClick={() => toggleDropdown(dropdownKey)}
-        className='text-darkTwo text-sm hover:text-main rounded-lg py-2 inline-flex items-center'
-        type='button'
-      >
+    <li className={styles.relative}>
+      <button className='text-darkTwo text-sm hover:text-main rounded-lg py-2 inline-flex items-center'>
         {label}
         <svg
           className='w-2 h-2 ml-1.5'
@@ -51,40 +28,34 @@ const Dropdown: React.FC<DropdownProps> = ({
           />
         </svg>
       </button>
-      {activeDropdown === dropdownKey && (
-        <div className='z-10 w-[220px] mt-3 absolute bg-white rounded-lg shadow'>
-          <ul className='py-3 text-sm text-darkTwo'>
-            {items.map((item, index) => (
-              <li
-                key={index}
-                onMouseEnter={() => handleMouseEnter(item.name)}
-                onMouseLeave={handleMouseLeave}
-                className='relative'
-              >
-                <Link
-                  href='#'
-                  className='block px-4 py-3 text-sm hover:text-main'
-                >
-                  {item.name}
-                </Link>
-                {item.subItems && activeSubMenu === item.name && (
-                  <div className='absolute left-full top-0 mt-2 w-48 bg-white rounded-lg shadow'>
-                    {item.subItems.map((subItem, subIndex) => (
-                      <Link
-                        key={subIndex}
+
+      <div className={styles.dropdownMenu}>
+        <ul className={styles.dropdownList}>
+          {items.map((item, index) => (
+            <li key={index} className={styles.dropdownItem}>
+              <a href='#' className='block px-4 py-3 text-sm hover:text-main'>
+                {item.name}
+              </a>
+
+              {/* Submenu for items with subItems */}
+              {item.subItems && (
+                <ul className={styles.subMenu}>
+                  {item.subItems.map((subItem, subIndex) => (
+                    <li key={subIndex}>
+                      <a
                         href='#'
                         className='block px-4 py-3 text-sm hover:text-main'
                       >
                         {subItem}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </li>
   )
 }

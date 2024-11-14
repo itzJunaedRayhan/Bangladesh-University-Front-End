@@ -21,26 +21,3 @@ body {
   background: var(--background);
   font-family: 'Arial', Helvetica, sans-serif; /* Ensure proper fallback */
 }
-
-/* Global reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: bold;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Add this to ensure proper stacking */
-.group:hover .absolute {
-  display: block;
-}
