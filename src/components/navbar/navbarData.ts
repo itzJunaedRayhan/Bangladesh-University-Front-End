@@ -1,4 +1,4 @@
-import {DropdownProps} from './dropdown.types'
+import {DropdownProps} from './navbar-dropdown/dropdown.types'
 
 export const dropdownData: DropdownProps[] = [
   {
