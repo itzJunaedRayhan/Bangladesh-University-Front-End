@@ -37,7 +37,6 @@ const Dropdown: React.FC<DropdownProps> = ({label, items}) => {
                 {item.name}
               </a>
 
-              {/* Submenu for items with subItems */}
               {item.subItems && (
                 <ul className={styles.subMenu}>
                   {item.subItems.map((subItem, subIndex) => (
