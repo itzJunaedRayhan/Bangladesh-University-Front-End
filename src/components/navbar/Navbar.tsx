@@ -56,10 +56,10 @@ const NavBar = () => {
             <input
               type='text'
               placeholder='Search...'
-              className='pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none'
+              className='pl-4 pr-4 py-2 rounded-full bg-white border border-gray-300 focus:outline-none'
             />
             <svg
-              className='absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400'
+              className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400'
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
               viewBox='0 0 24 24'
@@ -109,11 +109,11 @@ const NavBar = () => {
             <input
               type='text'
               placeholder='Search...'
-              className='pl-10 pr-4 py-2 rounded-full border focus:outline-none bg-white'
+              className='pl-3 py-1 max-w-32 rounded-full border focus:outline-none bg-white text-sm'
             />
             <div className=''>
               <svg
-                className='absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400'
+                className='absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400'
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
                 viewBox='0 0 24 24'
