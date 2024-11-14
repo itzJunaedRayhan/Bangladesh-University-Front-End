@@ -1,13 +1,12 @@
-import React from "react"
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
+// src/app/page.tsx
+import HeroSection from '../components/hero-section/HeroSection'
 
-
-export default function Home() {
+const HomePage = () => {
   return (
-    <>
-      <Navbar />
-      <Hero />
-    </>
+    <div>
+      <HeroSection />
+    </div>
   )
 }
+
+export default HomePage

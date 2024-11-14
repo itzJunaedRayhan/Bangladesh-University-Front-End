@@ -4,5 +4,19 @@
     "next/typescript",
     "eslint:recommended",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none",
+        "ignoreRestSiblings": true,
+        "vars": "all",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "react/jsx-uses-vars": "error",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  }
 }

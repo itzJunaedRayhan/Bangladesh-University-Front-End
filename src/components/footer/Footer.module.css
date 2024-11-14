@@ -1,0 +1,37 @@
+/* src/components/footer/Footer.module.css */
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem;
+  margin-top: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  width: 45%;
+}
+
+.title h4,
+.title h5 {
+  margin: 0;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+}
+
+.linkItem {
+  margin-bottom: 0.5rem;
+}
+
+.bottom {
+  text-align: center;
+  padding-top: 1rem;
+}
