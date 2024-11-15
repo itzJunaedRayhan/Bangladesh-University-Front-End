@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div className='carousel w-full'>
       <div id='slide1' className='carousel-item relative w-full'>
         <Image
-          width={50}
+          width={1000}
           height={100}
           alt=''
           src='https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp'
@@ -24,7 +24,7 @@ const HeroSection = () => {
       </div>
       <div id='slide2' className='carousel-item relative w-full'>
         <Image
-          width={50}
+          width={1000}
           height={100}
           alt=''
           src='https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp'
@@ -41,7 +41,7 @@ const HeroSection = () => {
       </div>
       <div id='slide3' className='carousel-item relative w-full'>
         <Image
-          width={50}
+          width={1000}
           height={100}
           alt=''
           src='https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp'
@@ -58,7 +58,7 @@ const HeroSection = () => {
       </div>
       <div id='slide4' className='carousel-item relative w-full'>
         <Image
-          width={50}
+          width={1000}
           height={100}
           alt=''
           src='https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp'
