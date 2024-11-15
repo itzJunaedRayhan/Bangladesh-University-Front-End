@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Carousel from '../carousel/Carousel'
 
 const items = [
-  <div key='nature-water' className='relative w-full h-[300px]'>
+  <div key='nature-water' className='relative w-full h-[500px]'>
     <Image
       layout='fill'
       src='/images/c1.jpg'
@@ -12,7 +12,7 @@ const items = [
       style={{objectFit: 'cover'}}
     />
   </div>,
-  <div key='nature-forest' className='relative w-full h-[300px]'>
+  <div key='nature-forest' className='relative w-full h-[500px]'>
     <Image
       layout='fill'
       src='/images/c2.jpg'
@@ -20,7 +20,7 @@ const items = [
       style={{objectFit: 'cover'}}
     />
   </div>,
-  <div key='nature-mountain' className='relative w-full h-[300px]'>
+  <div key='nature-mountain' className='relative w-full h-[500px]'>
     <Image
       layout='fill'
       src='/images/c3.jpg'
@@ -32,24 +32,12 @@ const items = [
 
 const HeroSection = () => {
   return (
-    <div className='mx-auto pb-16 h-[500px]'>
+    <div className='mx-auto pb-16'>
       <Carousel
         items={items}
-        renderNextButton={() => (
-          <button className='bg-blue-500 text-white p-2 rounded-full absolute right-2 top-1/2 -translate-y-1/2'>
-            Next
-          </button>
-        )}
-        renderPrevButton={() => (
-          <button className='bg-blue-500 text-white p-2 rounded-full absolute left-2 top-1/2 -translate-y-1/2'>
-            Prev
-          </button>
-        )}
-        renderIndicator={(isActive) => (
-          <div
-            className={`h-1 ${isActive ? 'bg-black w-8' : 'bg-gray-300 w-4'} rounded transition-all`}
-          />
-        )}
+        autoSlide={true}
+        autoSlideInterval={5000}
+        autoSlideSpeed={1000}
       />
     </div>
   )
