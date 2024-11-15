@@ -32,18 +32,38 @@ const Dropdown: React.FC<DropdownProps> = ({label, items}) => {
       <div className={styles.dropdownMenu}>
         <ul className={styles.dropdownList}>
           {items.map((item, index) => (
-            <li key={index} className={styles.dropdownItem}>
-              <a href='#' className='block px-4 py-3 text-sm hover:text-main'>
+            <li key={index} className={`${styles.dropdownItem}`}>
+              <a
+                href='#'
+                className='block px-4 py-1 text-sm hover:text-main flex items-center justify-between'
+              >
                 {item.name}
+                {item.subItems && (
+                  <svg
+                    className='w-2 h-2 ml-2'
+                    aria-hidden='true'
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 6 10'
+                  >
+                    <path
+                      stroke='currentColor'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                      d='M1 1l4 4-4 4'
+                    />
+                  </svg>
+                )}
               </a>
 
               {item.subItems && (
                 <ul className={styles.subMenu}>
                   {item.subItems.map((subItem, subIndex) => (
-                    <li key={subIndex}>
+                    <li key={subIndex} className={`${styles.dropdownItem}`}>
                       <a
                         href='#'
-                        className='block px-4 py-3 text-sm hover:text-main'
+                        className='block px-4 py-1 text-sm hover:text-main'
                       >
                         {subItem}
                       </a>
