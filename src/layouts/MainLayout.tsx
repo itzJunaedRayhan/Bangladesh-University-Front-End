@@ -5,7 +5,7 @@ import Navbar from '../components/navbar/Navbar'
 
 const MainLayout = ({children}: {children: ReactNode}) => {
   return (
-    <div className='flex flex-col justify-between min-h-screen'>
+    <div className='min-h-screen'>
       <Navbar />
       <main className='flex-grow'>{children}</main>
       <Footer />
