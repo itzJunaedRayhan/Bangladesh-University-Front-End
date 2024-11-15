@@ -11,8 +11,8 @@ const DesktopNavBar = () => (
         <Image
           src='/images/logo.png'
           alt='Logo'
-          width={40}
-          height={40}
+          width={150}
+          height={150}
           priority
         />
       </Link>
