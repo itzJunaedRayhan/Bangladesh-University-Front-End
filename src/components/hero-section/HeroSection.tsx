@@ -1,78 +1,44 @@
 'use client'
 
 import Image from 'next/image'
+import Carousel from '../carousel/Carousel'
+
+const items = [
+  <div key='nature-water' className='relative w-full h-[850px]'>
+    <Image
+      layout='fill'
+      src='/images/c1.jpg'
+      alt='Nature Water'
+      style={{objectFit: 'cover'}}
+    />
+  </div>,
+  <div key='nature-forest' className='relative w-full h-[850px]'>
+    <Image
+      layout='fill'
+      src='/images/c2.jpg'
+      alt='Nature Forest'
+      style={{objectFit: 'cover'}}
+    />
+  </div>,
+  <div key='nature-mountain' className='relative w-full h-[850px]'>
+    <Image
+      layout='fill'
+      src='/images/c3.jpg'
+      alt='Nature Mountain'
+      style={{objectFit: 'cover'}}
+    />
+  </div>,
+]
 
 const HeroSection = () => {
   return (
-    <div className='carousel w-full'>
-      <div id='slide1' className='carousel-item relative w-full'>
-        <Image
-          width={1000}
-          height={100}
-          alt=''
-          src='https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp'
-          className='w-full'
-        />
-        <div className='absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between'>
-          <a href='#slide4' className='btn btn-circle'>
-            ❮
-          </a>
-          <a href='#slide2' className='btn btn-circle'>
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id='slide2' className='carousel-item relative w-full'>
-        <Image
-          width={1000}
-          height={100}
-          alt=''
-          src='https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp'
-          className='w-full'
-        />
-        <div className='absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between'>
-          <a href='#slide1' className='btn btn-circle'>
-            ❮
-          </a>
-          <a href='#slide3' className='btn btn-circle'>
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id='slide3' className='carousel-item relative w-full'>
-        <Image
-          width={1000}
-          height={100}
-          alt=''
-          src='https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp'
-          className='w-full'
-        />
-        <div className='absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between'>
-          <a href='#slide2' className='btn btn-circle'>
-            ❮
-          </a>
-          <a href='#slide4' className='btn btn-circle'>
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id='slide4' className='carousel-item relative w-full'>
-        <Image
-          width={1000}
-          height={100}
-          alt=''
-          src='https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp'
-          className='w-full'
-        />
-        <div className='absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between'>
-          <a href='#slide3' className='btn btn-circle'>
-            ❮
-          </a>
-          <a href='#slide1' className='btn btn-circle'>
-            ❯
-          </a>
-        </div>
-      </div>
+    <div className='mx-auto pb-16'>
+      <Carousel
+        items={items}
+        autoSlide={true}
+        autoSlideInterval={5000}
+        autoSlideSpeed={1000}
+      />
     </div>
   )
 }

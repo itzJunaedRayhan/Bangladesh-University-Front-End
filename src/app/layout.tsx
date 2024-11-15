@@ -4,7 +4,7 @@ import MainLayout from '../layouts/MainLayout'
 import './globals.css'
 
 export const metadata = {
-  title: 'University Website',
+  title: 'Bangladesh University',
   description: 'Providing quality education and resources',
 }
 

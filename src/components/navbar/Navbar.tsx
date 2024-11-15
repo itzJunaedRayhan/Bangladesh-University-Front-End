@@ -7,7 +7,7 @@ import styles from './NavBar.module.css'
 
 const NavBar = () => (
   <nav className={styles.navbar}>
-    <div className='container mx-auto px-4 py-3'>
+    <div className='xl:container mx-auto px-4 py-3'>
       <DesktopNavBar />
       <MobileNavBar />
       <MobileDrawer />

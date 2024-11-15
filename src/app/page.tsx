@@ -1,6 +1,6 @@
 // src/app/page.tsx
 
-import HeroSection from '../components/hero-section/HeroSection'
+import HeroSection from '@/components/hero-section/HeroSection'
 import UpdatedNews from '@/components/updated-news/UpdatedNews'
 
 const HomePage = () => {
