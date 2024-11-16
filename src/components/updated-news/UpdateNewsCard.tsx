@@ -6,7 +6,7 @@ export default function CarouselCard({data, index}: CarouselCardProps) {
   return (
     <div className='flex flex-wrap justify-center gap-5 lg:mx-4 xs:mx-1 sm:mx-2 xs:gap-2'>
       <div
-        className='max-w-[440px] xl:h-[500px] flex xs:flex-col xs:items-center shadow-lg rounded-md border xs:h-auto xs:w-[95%] sm:w-full lg:h-[350px]'
+        className='max-w-[440px] xl:h-[500px] flex xs:flex-col xs:items-center shadow-lg rounded-md border xs:h-auto xs:w-[95%] sm:w-full lg:h-[450px]'
         key={index}
       >
         <Image

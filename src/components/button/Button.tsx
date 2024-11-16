@@ -4,7 +4,7 @@ export default function Button() {
   return (
     <Link
       href='#'
-      className='group text-lg py-3 px-4 xs:py-2 xs:text-sm xs:px-2 md:py-3 md:px-3 md:text-lg xl:px-4 xl:py-3 rounded-md flex items-center justify-center bg-main text-white border border-transparent transition duration-300 ease-in-out hover:bg-white hover:text-main hover:border-main'
+      className='xs:max-w-28 md:max-w-32 lg:max-w-36 text-nowrap group text-lg py-3 px-4 xs:py-2 xs:text-sm xs:px-2 md:py-2 md:px-2 md:text-lg xl:px-4 xl:py-3 rounded-md flex items-center justify-center bg-main text-white border border-transparent transition duration-300 ease-in-out hover:bg-white hover:text-main hover:border-main'
     >
       Read More
       <svg

@@ -7,7 +7,7 @@ const MainLayout = ({children}: {children: ReactNode}) => {
   return (
     <div className='min-h-screen'>
       <Navbar />
-      <main className='flex-grow container mx-auto'>{children}</main>
+      <main className='flex-grow mx-auto'>{children}</main>
       <Footer />
     </div>
   )
