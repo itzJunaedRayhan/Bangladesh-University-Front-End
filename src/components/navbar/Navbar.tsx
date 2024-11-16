@@ -3,7 +3,7 @@
 import DesktopNavBar from './desktop/DesktopNavbar'
 import MobileDrawer from './mobile/MobileDrawer'
 import MobileNavBar from './mobile/MobileNavBar'
-import styles from './NavBar.module.css'
+import styles from './Navbar.module.css'
 
 const NavBar = () => (
   <nav className={styles.navbar}>
