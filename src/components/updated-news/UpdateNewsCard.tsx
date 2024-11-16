@@ -10,13 +10,13 @@ export default function CarouselCard({data, index}: CarouselCardProps) {
         key={index}
       >
         <Image
-          className='w-full h-[60%] object-cover rounded-t-md sm:h-1/2'
+          className='w-full h-[60%] object-cover rounded-t-md sm:h-1/2 lg:h-[65%]'
           src={data.imageURL}
           width={400}
           height={350}
           alt={data.title}
         />
-        <div className='w-4/6 xs:w-full xs:px-2 lg:px-4'>
+        <div className='w-4/6 xs:w-full xs:px-2 lg:px-4 xl:px-6'>
           <h3 className='py-4 font-bold text-xl text-darkTwo xs:text-xs xs:text-left sm:text-lg sm:leading-6 md:text-lg lg:text-xl lg:leading-9'>
             {data.title}
           </h3>
